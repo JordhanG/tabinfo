@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import "./styles/theme.css";
+
+@property --institutional-orbit-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes institutional-spin-clockwise {
+  to {
+    --institutional-orbit-angle: 360deg;
+  }
+}
+
+@keyframes institutional-spin-counter-clockwise {
+  to {
+    --institutional-orbit-angle: -360deg;
+  }
+}
+
+.institutional-orbit {
+  position: absolute;
+  border-radius: 9999px;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+  transform: rotate(var(--institutional-orbit-angle));
+}
+
+.institutional-orbit-clockwise {
+  animation-name: institutional-spin-clockwise;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+}
+
+.institutional-orbit-counter-clockwise {
+  animation-name: institutional-spin-counter-clockwise;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+}
+
+.institutional-orbit-keep-upright {
+  transform: rotate(calc(var(--institutional-orbit-angle) * -1));
+}

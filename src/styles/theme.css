@@ -1,0 +1,20 @@
+@theme {
+  --color-primary: #0384e5;
+  --color-primary-dark: #0571c8;
+  --color-primary-navy: #04305b;
+  --color-primary-deep: #0e1a36;
+
+  --color-orange: #f87308;
+  --color-orange-light: #f68731;
+
+  --color-background: #ffffff;
+  --color-background-linear: #00afef;
+  --color-background-soft: #f0f2f5;
+  --color-card-light: #dbf3ff;
+
+  --color-text-primary: #022140;
+  --color-text-secondary: #556175;
+  --color-text-light: #ffffff;
+
+  --color-border: #e4e8ee;
+}
